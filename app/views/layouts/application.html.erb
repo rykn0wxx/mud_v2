@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" class="rykn0wxx no-js">
+  <head>
+    <meta charset="UTF-8" />
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  	<meta name="author" content="rykn0wxx" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+
+    <title>
+      <%= content_for?(:title) ? yield(:title) + " | rykn0wxx" : "rykn0wxx" %>
+    </title>
+
+    <%= javascript_tag do %>
+      document.documentElement.className = "rykn0wxx js";
+    <% end %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= tag :meta, name: 'turbolinks-root', content: '/' %>
+    <%= tag :meta, name: 'turbolinks-cache-control', content: 'no-cache' %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body class="mudhead page-fixed main-fixed">
+
+    <div class="app">
+      <div class="app-wrap">
+
+        <%= render "partials/header" %>
+
+        <div class="app-container">
+
+          <div class="app-main">
+
+            <%= render "partials/navbar" %>
+
+            <section class="content-header">
+              <div class="dashhead">
+                <div class="dashhead-titles">
+                  <h4 class="dashhead-title">Content Header</h4>
+                </div>
+                <div class="dashhead-toolbar">
+                  <div class="dashhead-toolbar-item">
+                    <i class="fa fa-dashboard"></i>
+                    <small><%= action_name %></small>
+                  </div>
+                </div>
+              </div>
+              <%= render "partials/alert" if flash.present? %>
+            </section>
+
+            <section class="main-content">
+              <div class="container-fluid">
+
+                <%= yield %>
+
+              </div>
+              <span class="fa fa-angle-up" id="totop" data-plugin="totop"></span>
+            </section>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+  </body>
+
+</html>

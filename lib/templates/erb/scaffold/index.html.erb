@@ -1,0 +1,56 @@
+<%% title "Index", false %>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="box">
+      <div class="box-header">
+        <h4><%= plural_table_name.titleize %></h4>
+      </div>
+      <div class="box-body">
+        <table class="table table-striped table-hover table-condensed" id="tbl-treeviews">
+          <thead>
+            <tr>
+              <%- attributes.reject(&:password_digest?).each do |attribute| -%>
+                <th><%= attribute.human_name %></th>
+              <%- end -%>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+              <tr id="<%%= <%= singular_table_name %>.id %>">
+                <%- attributes.reject(&:password_digest?).each do |attribute| -%>
+                  <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
+                <%- end -%>
+                <td>
+                  <div class="btn-group">
+                    <%%= link_to <%= singular_table_name %>, :class => "btn link-btn btn-icon btn-default" do %>
+                      <%%= fa_icon("eye") %>
+                    <%% end %>
+                  </div>
+                </td>
+                <td>
+                  <div class="btn-group">
+                    <%%= link_to edit_<%= singular_table_name %>_path(<%= singular_table_name %>), :class => "btn link-btn btn-icon btn-default" do %>
+                      <%%= fa_icon("pencil") %>
+                    <%% end %>
+                  </div>
+                </td>
+                <td>
+                  <div class="btn-group">
+                    <%%= link_to <%= singular_table_name %>, :class => "btn link-btn btn-icon btn-danger", method: :delete, data: { confirm: "Are you sure?" } do %>
+                      <%%= fa_icon("trash-o") %>
+                    <%% end %>
+                  </div>
+                </td>
+              </tr>
+            <%% end %>
+          </tbody>
+        </table>
+      </div>
+      <div class="box-footer">
+        <%%= link_to "New <%= singular_table_name.titleize %>", new_<%= singular_table_name %>_path, :class => "btn link-btn btn-info" %>
+      </div>
+    </div>
+  </div>
+</div>

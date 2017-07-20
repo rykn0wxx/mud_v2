@@ -1,0 +1,19 @@
+<%% title "Show", false %>
+
+<div class="box">
+  <div class="box-header">
+    <h4><%= singular_table_name.titleize %> #<%%= @<%= singular_table_name %>.id %></h4>
+  </div>
+  <div class="box-body">
+    <dl class="dl-horizontal m-a-0">
+      <%- attributes.reject(&:password_digest?).each do |attribute| -%>
+        <dt><%= attribute.human_name %>:</dt>
+        <dd><%%= @<%= singular_table_name %>.<%= attribute.name %> %></dd>
+      <%- end -%>
+    </dl>
+  </div>
+  <div class="box-footer">
+    <%%= link_to "Edit", edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), :class => "btn link-btn" %>
+    <%%= link_to "Back", <%= index_helper %>_path, :class => "btn link-btn" %>
+  </div>
+</div>

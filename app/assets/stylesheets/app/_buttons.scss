@@ -1,0 +1,103 @@
+.rykn0wxx .mudhead {
+  .btn-flat {
+    border-radius: 0;
+  	min-width: 88px;
+  	line-height: 20px;
+  	min-height: 20px;
+  	outline: none;
+  	border: 0;
+  	white-space: nowrap;
+  	font-weight: 500;
+  	font-size: 14px;
+  	letter-spacing: 0.01em;
+  	color: currentColor;
+  	background-color: rgba(0,0,0,0);
+    &:hover {
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+      background-color: #f5f5f5;
+    }
+    &.btn-primary {
+      color: $brand-primary;
+      &:hover {
+        background-color: rgba($brand-primary, 0.2);
+      }
+    }
+    &.btn-info {
+      color: $brand-info;
+      &:hover {
+        background-color: rgba($brand-info, 0.2);
+      }
+    }
+    &.btn-warning {
+      color: $brand-warning;
+      &:hover {
+        background-color: rgba($brand-warning, 0.2);
+      }
+    }
+    &.btn-success {
+      color: $brand-success;
+      &:hover {
+        background-color: rgba($brand-primary, 0.2);
+      }
+    }
+    &.btn-danger {
+      color: $brand-danger;
+      &:hover {
+        background-color: rgba($brand-danger, 0.2);
+      }
+    }
+  }
+  .link-btn {
+    min-width: 88px;
+    padding: 5px 10px;
+    background-color: rgba(0,0,0,0);
+    border: 0 solid rgba(0,0,0,0);
+    box-shadow: none;
+    outline: none;
+    color: $belize-hole;
+    border-radius: 0;
+    &:hover, &:active, &:focus {
+      outline: none;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+      background-color: rgba(128,128,128,0.07);
+    }
+  }
+  .btn-default {
+    border: 0 solid rgba(0,0,0,0);
+    outline: none;
+    &:hover, &:focus, &:active {
+      outline: none;
+      border: 0 solid rgba(0,0,0,0);
+    }
+  }
+  .btn-icon {
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    z-index: 20;
+    min-width: 0;
+    vertical-align: middle;
+    border-radius: 50%;
+    background-clip: padding-box;
+    > .fa {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      display: block;
+      margin: auto;
+      vertical-align: middle;
+      height: 24px;
+      width: 100%;
+      min-height: 24px;
+      min-width: 24px;
+      line-height: 24px;
+    }
+    @include btn-link-themer('default', $primary-color);
+    @include btn-link-themer('primary', $brand-primary);
+    @include btn-link-themer('info', $brand-info);
+    @include btn-link-themer('danger', $brand-danger);
+    @include btn-link-themer('warning', $brand-warning);
+    @include btn-link-themer('success', $brand-success);
+  }
+}

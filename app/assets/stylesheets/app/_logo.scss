@@ -1,0 +1,22 @@
+.rykn0wxx .mudhead {
+  .logo {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden;
+    background-color: mix(#111, $navbar-inverse-bg, 10%);
+    color: #c8c8c8;
+    &, &:hover, &:focus {
+      text-decoration: none;
+    }
+    .logo-xs, .logo-lg {
+      flex: 1 1 0%;
+      flex-basis: 0%;
+      > p {
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        margin: 0;
+      }
+    }
+  }
+}

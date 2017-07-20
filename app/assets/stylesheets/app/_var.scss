@@ -1,0 +1,106 @@
+@function rem($multiplier) {
+  $font-size: 10px;
+  @return $multiplier * $font-size;
+}
+$sidebarWidth:      200px;
+$sidebarMiniWidth:  50px;
+
+$turquoise:      #1abc9c;
+$emerland:       #2ecc71;
+$peter-river:    #3498db;
+$amethyst:       #9b59b6;
+$wet-asphalt:    #34495e;
+$green-sea:      #16a085;
+$nephritis:      #27ae60;
+$belize-hole:    #2980b9;
+$wisteria:       #8e44ad;
+$midnight-blue:  #2c3e50;
+$sun-flower:     #f1c40f;
+$carrot:         #e67e22;
+$alizarin:       #e74c3c;
+$clouds:         #ecf0f1;
+$concrete:       #95a5a6;
+$orange:         #f39c12;
+$pumpkin:        #d35400;
+$pomegranate:    #c0392b;
+$silver:         #bdc3c7;
+$asbestos:       #7f8c8d;
+$white:          #fafafa;
+$black:          #212121;
+
+$umbra-opacity:      0.3;
+$penumbra-opacity:   0.19;
+$shadow-opacity: 0.12;
+
+$shadow-1dp: 0px 1px 3px 0px rgba(0, 0, 0, $umbra-opacity), 0px 1px 1px 0px rgba(0, 0, 0, $penumbra-opacity), 0px 2px 1px -1px rgba(0, 0, 0, $shadow-opacity);
+$shadow-2dp: 0px 1px 5px 0px rgba(0, 0, 0, $umbra-opacity), 0px 2px 2px 0px rgba(0, 0, 0, $penumbra-opacity), 0px 3px 1px -2px rgba(0, 0, 0, $shadow-opacity);
+$shadow-3dp: 0px 1px 8px 0px rgba(0, 0, 0, $umbra-opacity), 0px 3px 4px 0px rgba(0, 0, 0, $penumbra-opacity), 0px 3px 3px -2px rgba(0, 0, 0, $shadow-opacity);
+$shadow-4dp: 0px 2px 4px -1px rgba(0, 0, 0, $umbra-opacity), 0px 4px 5px 0px rgba(0, 0, 0, $penumbra-opacity), 0px 1px 10px 0px rgba(0, 0, 0, $shadow-opacity);
+$shadow-5dp: 0px 3px 5px -1px rgba(0, 0, 0, $umbra-opacity), 0px 5px 8px 0px rgba(0, 0, 0, $penumbra-opacity), 0px 1px 14px 0px rgba(0, 0, 0, $shadow-opacity);
+$shadow-6dp: 0px 3px 5px -1px rgba(0, 0, 0, $umbra-opacity), 0px 6px 10px 0px rgba(0, 0, 0, $penumbra-opacity), 0px 1px 18px 0px rgba(0, 0, 0, $shadow-opacity);
+$shadow-7dp: 0px 4px 5px -2px rgba(0, 0, 0, $umbra-opacity), 0px 7px 10px 1px rgba(0, 0, 0, $penumbra-opacity), 0px 2px 16px 1px rgba(0, 0, 0, $shadow-opacity);
+$shadow-8dp: 0px 5px 5px -3px rgba(0, 0, 0, $umbra-opacity), 0px 8px 10px 1px rgba(0, 0, 0, $penumbra-opacity), 0px 3px 14px 2px rgba(0, 0, 0, $shadow-opacity);
+$shadow-9dp: 0px 5px 6px -3px rgba(0, 0, 0, $umbra-opacity), 0px 9px 12px 1px rgba(0, 0, 0, $penumbra-opacity), 0px 3px 16px 2px rgba(0, 0, 0, $shadow-opacity);
+$shadow-10dp: 0px 6px 6px -3px rgba(0, 0, 0, $umbra-opacity), 0px 10px 14px 1px rgba(0, 0, 0, $penumbra-opacity), 0px 4px 18px 3px rgba(0, 0, 0, $shadow-opacity);
+$shadow-11dp: 0px 6px 7px -4px rgba(0, 0, 0, $umbra-opacity), 0px 11px 15px 1px rgba(0, 0, 0, $penumbra-opacity), 0px 4px 20px 3px rgba(0, 0, 0, $shadow-opacity);
+$shadow-12dp: 0px 7px 8px -4px rgba(0, 0, 0, $umbra-opacity), 0px 12px 17px 2px rgba(0, 0, 0, $penumbra-opacity), 0px 5px 22px 4px rgba(0, 0, 0, $shadow-opacity);
+$shadow-13dp: 0px 7px 8px -4px rgba(0, 0, 0, $umbra-opacity), 0px 13px 19px 2px rgba(0, 0, 0, $penumbra-opacity), 0px 5px 24px 4px rgba(0, 0, 0, $shadow-opacity);
+$shadow-14dp: 0px 7px 9px -4px rgba(0, 0, 0, $umbra-opacity), 0px 14px 21px 2px rgba(0, 0, 0, $penumbra-opacity), 0px 5px 26px 4px rgba(0, 0, 0, $shadow-opacity);
+$shadow-15dp: 0px 8px 9px -5px rgba(0, 0, 0, $umbra-opacity), 0px 15px 22px 2px rgba(0, 0, 0, $penumbra-opacity), 0px 6px 28px 5px rgba(0, 0, 0, $shadow-opacity);
+$shadow-16dp: 0px 8px 10px -5px rgba(0, 0, 0, $umbra-opacity), 0px 16px 24px 2px rgba(0, 0, 0, $penumbra-opacity), 0px 6px 30px 5px rgba(0, 0, 0, $shadow-opacity);
+$shadow-17dp: 0px 8px 11px -5px rgba(0, 0, 0, $umbra-opacity), 0px 17px 26px 2px rgba(0, 0, 0, $penumbra-opacity), 0px 6px 32px 5px rgba(0, 0, 0, $shadow-opacity);
+$shadow-18dp: 0px 9px 11px -5px rgba(0, 0, 0, $umbra-opacity), 0px 18px 28px 2px rgba(0, 0, 0, $penumbra-opacity), 0px 7px 34px 6px rgba(0, 0, 0, $shadow-opacity);
+$shadow-19dp: 0px 9px 12px -6px rgba(0, 0, 0, $umbra-opacity), 0px 19px 29px 2px rgba(0, 0, 0, $penumbra-opacity), 0px 7px 36px 6px rgba(0, 0, 0, $shadow-opacity);
+$shadow-20dp: 0px 10px 13px -6px rgba(0, 0, 0, $umbra-opacity), 0px 20px 31px 3px rgba(0, 0, 0, $penumbra-opacity), 0px 8px 38px 7px rgba(0, 0, 0, $shadow-opacity);
+$shadow-21dp: 0px 10px 13px -6px rgba(0, 0, 0, $umbra-opacity), 0px 21px 33px 3px rgba(0, 0, 0, $penumbra-opacity), 0px 8px 40px 7px rgba(0, 0, 0, $shadow-opacity);
+$shadow-22dp: 0px 10px 14px -6px rgba(0, 0, 0, $umbra-opacity), 0px 22px 35px 3px rgba(0, 0, 0, $penumbra-opacity), 0px 8px 42px 7px rgba(0, 0, 0, $shadow-opacity);
+$shadow-23dp: 0px 11px 14px -7px rgba(0, 0, 0, $umbra-opacity), 0px 23px 36px 3px rgba(0, 0, 0, $penumbra-opacity), 0px 9px 44px 8px rgba(0, 0, 0, $shadow-opacity);
+$shadow-24dp: 0px 11px 15px -7px rgba(0, 0, 0, $umbra-opacity), 0px 24px 38px 3px rgba(0, 0, 0, $penumbra-opacity), 0px 9px 46px 8px rgba(0, 0, 0, $shadow-opacity);
+
+$gray:                   #52575C;
+$gray-darker:            darken($gray, 20%);
+$gray-dark:              darken($gray, 13.5%);
+$gray-light:             #7A8288;
+$gray-lighter:           #90a4ae;
+
+$brand-primary:         #607d8b;
+$brand-success:         #1de9b6;
+$brand-warning:         #ff9800;
+$brand-danger:          #ef5350;
+$brand-info:            #55acee;
+
+$primary-bg: #ebeef5;
+$primary-color: #272b30;
+$link-color: #1565c0;
+$link-hover-color: darken($link-color, 10%);
+
+$body-bg:               $primary-bg;
+$text-color:            $primary-color;
+
+$font-family-sans-serif:  'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$primary-font:         $font-family-sans-serif;
+
+$navbar-inverse-color:                      #c8c8c8;
+$navbar-inverse-bg:                         $gray-dark;
+$navbar-inverse-border:                     darken($navbar-inverse-bg, 5%);
+
+$table-bg:                           rgba(255, 255, 255, 0); //== overall background-color
+$table-bg-accent:                    rgba(0, 0, 0, 0.015); //== for striping
+$table-bg-hover:                     rgba(0,0,0,0.03);
+$table-bg-active:                    $table-bg-hover;
+
+$state-success-text:             $brand-success;
+$state-success-bg:               #E3FCF6;
+$state-success-border:           darken($state-success-bg, 5%);
+
+$state-info-text:                $brand-info;
+$state-info-bg:                  #EAF5FD;
+$state-info-border:              darken($state-info-bg, 5%);
+
+$state-warning-text:             $brand-warning;
+$state-warning-bg:               #FFF2DF;
+$state-warning-border:           darken($state-warning-bg, 5%);
+
+$state-danger-text:              $brand-danger;
+$state-danger-bg:                #FDEAE9;
+$state-danger-border:            darken($state-danger-bg, 5%);

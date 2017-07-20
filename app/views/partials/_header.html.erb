@@ -1,0 +1,42 @@
+<header class="app-heading">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+      <div class="navbar-header-left">
+        <%= link_to root_path, :class => "logo" do %>
+          <span class="logo-xs visible-xs">
+            <p><b>M</b>UD</p>
+          </span>
+          <span class="logo-lg hidden-xs">
+            <p><b>Mud</b>head</p>
+          </span>
+        <% end %>
+      </div>
+      <nav class="nav navbar-header-nav">
+        <a class="visible-xs toggler" href="#top-nav-list" data-toggle="collapse">
+          <i class="fa fa-fw fa-bars"></i>
+        </a>
+      </nav>
+      <ul class="nav navbar-header-nav">
+        <li class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <b>User</b>
+          </a>
+          <ul class="dropdown-menu flipInY pull-right">
+            <li class="user-options">
+              <div class="pull-left">
+                <a href="#" class="btn btn-default btn-flat">
+                  Edit Profile
+                </a>
+              </div>
+              <div class="pull-right">
+                <a href="#" class="btn btn-default btn-flat">
+                  Sign Out
+                </a>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

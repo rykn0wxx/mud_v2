@@ -1,0 +1,14 @@
+<%% title "New", false %>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="box">
+      <div class="box-header">
+        <h4><%= singular_table_name.titleize %> #<%%= @<%= singular_table_name %>.id %></h4>
+      </div>
+      <div class="box-body">
+        <%%= render "form" %>
+      </div>
+    </div>
+  </div>
+</div>

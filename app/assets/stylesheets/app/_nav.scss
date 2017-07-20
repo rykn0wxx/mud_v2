@@ -1,0 +1,191 @@
+.rykn0wxx .mudhead {
+  .nav-header {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 5px;
+    font-size: 85%;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: $silver;
+    text-transform: uppercase;
+  }
+  @media (min-width: $screen-sm-min) {
+    .nav {
+      &.is-center,
+      &.is-right,
+      &.is-left {
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      &.is-center {
+        justify-content: center;
+      }
+      &.is-right {
+        justify-content: flex-end;
+        > li > ul {
+          left: auto;
+          right: 0;
+        }
+      }
+      &.is-left {
+        justify-content: flex-start;
+      }
+      &.nav-hoverable > li:hover > .nav-sub {
+        display: block !important;
+        height: auto !important;
+      }
+    }
+  }
+  .nav-sub {
+    min-width: $sidebarWidth - $sidebarMiniWidth;
+  }
+  .nav.nav-inline {
+    float: none !important;
+    > a, > li {
+      display: inline-block;
+    }
+  }
+  .nav-inline .nav-header {
+    margin: 0;
+  }
+  @media (min-width: $screen-sm-min) {
+    .nav.nav-inline > li > .nav-sub {
+      // background-color: #fff;
+      z-index: 1000;
+      &, &.collapse, &.collapsing {
+        position: absolute;
+        top: 100%;
+      }
+    }
+    .nav.nav-inline > li:last-child > .nav-sub {
+      left: auto;
+      right: 0;
+    }
+  }
+  .nav-bordered {
+    margin: 0;
+    > li > a {
+      border-color: transparent;
+      &:hover,
+      &:focus {
+        background: none;
+      }
+    }
+    > li:not(.disabled) > a:not(.disabled):after,
+    > a:not(.disabled):after {
+      position: absolute;
+      height: 100%;
+      width: 4px;
+      content: '';
+      left: 0;
+      bottom: 0;
+      background: $brand-danger;
+      transform: scale3d(0,0,1);
+      transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+    > li.active:not(.disabled) > a::after,
+    > li:not(.disabled) > a.active::after {
+      transform: scale3d(1, 1, 1);
+    }
+    &.nav-inline > li:not(.disabled) > a:not(.disabled):after,
+    &.nav-inline > a:not(.disabled):after {
+      height: 3px;
+      width: 100%;
+    }
+    > li.active > a, > a.active {
+      &:after,
+      &:hover:after,
+      &:focus:after {
+        transform: scale3d(1,1,1);
+      }
+    }
+    > li:not(.disabled) > a:not(.disabled) {
+      &:hover:after,
+      &:focus:after {
+        transform: scale3d(1,1,1);
+      }
+    }
+    > li.disabled > a, > a.disabled {
+      &:hover:after,
+      &:focus:after {
+        transform: scale3d(0,0,1);
+      }
+    }
+    .nav-header {
+      margin: 0;
+    }
+    @media (min-width: $screen-sm-min) {
+      > li > .nav-sub {
+        // background-color: #fff;
+        z-index: 1000;
+        &,
+        &.collapse,
+        &.collapsing {
+          position: absolute;
+          top: 0;
+          left: 100%;
+        }
+      }
+      &.nav-inline > li > .nav-sub {
+        // background-color: #fff;
+        z-index: 1000;
+        &,
+        &.collapse,
+        &.collapsing {
+          position: absolute;
+          top: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+  .nav-inverse {
+    background: $gray-darker;
+    color: $silver;
+     > li > a, > a {
+      color: $silver;
+      &:focus, &:hover {
+        color: $clouds;
+        background: lighten($gray-darker, 10%);
+      }
+    }
+    .nav-divider {
+      background: $concrete;
+    }
+  }
+  .nav > li.active > a,
+  .nav > li > a.active,
+  .nav > a.active {
+    color: $peter-river;
+    background: lighten($gray-darker, 7%);
+  }
+  .nav-tools {
+    float: right;
+  }
+  ul.nav-sub li {
+    display: none;
+  }
+  .treeview:hover > ul.nav-sub {
+    perspective: 1000px;
+    li {
+      display: block;
+      opacity: 0;
+      @for $i from 1 through 6 {
+        &:nth-child(#{$i}) {
+          animation-name: metising;
+          animation-duration: 150ms + (150ms * $i);
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+  }
+  .treeview > a .fa-fw {
+    width: 20px;
+  }
+  .nav-stacked > li + li {
+    margin: 0;
+  }
+}

@@ -1,0 +1,47 @@
+%btn-trans {
+  transition: box-shadow .4s cubic-bezier(.25,.8,.25,1), background-color .4s cubic-bezier(.25,.8,.25,1), color .4s cubic-bezier(.25,.8,.25,1);
+}
+%tab-focus {
+  outline: none;
+}
+%basetrans {
+  transition: all 0.3s ease-in-out;
+}
+.clrfix {
+  &:before, &::before,
+  &:after, &::after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after, &::after {
+    clear: both;
+  }
+}
+@mixin gradient-by-dir($g1, $g2, $pos:'top') {
+  background-color: $g1;
+  @if $pos == 'top' {
+    background-image: -webkit-linear-gradient($g1, $g2);
+    background-image: -moz-linear-gradient($g1, $g2);
+    background-image: -o-linear-gradient($g1, $g2);
+    background-image: unquote("linear-gradient(#{$g1}, #{$g2})");
+  }
+  @if $pos != 'top' {
+    $ldir: 'to #{$pos}';
+    background-image: -webkit-linear-gradient(unquote($ldir), $g1, $g2);
+    background-image: -moz-linear-gradient(unquote($ldir), $g1, $g2);
+    background-image: -o-linear-gradient(unquote($ldir), $g1, $g2);
+    background-image: unquote("linear-gradient(#{$ldir}, #{$g1}, #{$g2})");
+  }
+}
+
+@mixin btn-link-themer($parent, $bg) {
+  &.btn-#{$parent} {
+    color: $bg;
+    background-color: rgba($bg, 0.02);
+    &:hover, &:focus, &:active {
+      background-color: rgba($bg, 0.07);
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    }
+  }
+}

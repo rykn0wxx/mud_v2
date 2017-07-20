@@ -1,0 +1,22 @@
+<aside class="main-heading">
+  <nav class="top-nav navbar-collapse collapse" id="top-nav-list" aria-expanded="false">
+    <ul class="metismenu nav nav-inverse nav-bordered nav-inline nav-hoverable is-hoverable is-left" data-plugin="metismenu">
+      <%= navbar_link_to " Index", root_path, {:active_when => { :controller => "page" }, :fa_ico => "cogs"} %>
+      <li class="treeview">
+        <a href="#">
+          <span class="nav-icon">
+            <i class="fa fa-fw fa-bar-chart-o"></i>
+          </span>
+          <span class="nav-title">Menu 2</span>
+          <span class="nav-tools visible-xs">
+            <i class="fa fa-fw arrow"></i>
+          </span>
+        </a>
+        <ul class="nav nav-sub nav-stacked collapse">
+          <li><a href="#">Sub Menu1</a></li>
+          <li><a href="#">Sub Menu2</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</aside>
