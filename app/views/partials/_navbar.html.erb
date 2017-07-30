@@ -1,7 +1,13 @@
 <aside class="main-heading">
   <nav class="top-nav navbar-collapse collapse" id="top-nav-list" aria-expanded="false">
     <ul class="metismenu nav nav-inverse nav-bordered nav-inline nav-hoverable is-hoverable is-left" data-plugin="metismenu">
-      <%= navbar_link_to " Index", root_path, {:active_when => { :controller => "page" }, :fa_ico => "cogs"} %>
+      <%= navbar_linker " Index", root_path, {:active_when => { :controller => "page" }, :fa_ico => "cogs"} %>
+      <%= navbar_linker " Dash", "#", {:active_when => { :controller => /admin/ }, :fa_ico => "cubes", :treeview => 'treeview'} do |linker| %>
+        <%= linker %>
+        <ul class="nav nav-sub nav-stacked collapse">
+          <%= navbar_linker "Dashboard", admin_dashboard_path %>
+        </ul>
+      <% end %>
       <li class="treeview">
         <a href="#">
           <span class="nav-icon">
