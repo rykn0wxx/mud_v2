@@ -7,6 +7,18 @@
   }
 }
 
+.md-title {
+  font-size: $title-font-size-base;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+}
+.md-subhead {
+  font-size: $subhead-font-size-base;
+  font-weight: 400;
+  letter-spacing: 0.010em;
+  line-height: rem(2.4);
+}
+
 @mixin bg-varies() {
   $colornames: 'turquoise','emerland','peter-river','amethyst','wet-asphalt','green-sea','nephritis','belize-hole','wisteria','midnight-blue','sun-flower','carrot','alizarin','clouds','concrete','orange','pumpkin','pomegranate','silver','asbestos','slate';
   $colors: #1abc9c,#2ecc71,#3498db,#9b59b6,#34495e,#16a085,#27ae60,#2980b9,#8e44ad,#2c3e50,#f1c40f,#e67e22,#e74c3c,#ecf0f1,#95a5a6,#f39c12,#d35400,#c0392b,#bdc3c7,#7f8c8d,#484e55;
@@ -83,3 +95,29 @@
     @include padd($v);
   }
 }
+
+.b-0 { border: none !important; }
+.b-a { border: 1px solid rgba(#e7e7e7, 0.7) !important; }
+.b-t { border-top: 1px solid rgba(#e7e7e7, 0.7) !important; }
+.b-r { border-right: 1px solid rgba(#e7e7e7, 0.7) !important; }
+.b-b { border-bottom: 1px solid rgba(#e7e7e7, 0.7) !important; }
+.b-l { border-left: 1px solid rgba(#e7e7e7, 0.7) !important; }
+.b-h {
+  @extend .b-t;
+  @extend .b-b;
+}
+.b-v {
+  @extend .b-r;
+  @extend .b-l;
+}
+.b-w-1 { border-width: 1px !important; }
+.b-w-2 { border-width: 2px !important; }
+.b-w-3 { border-width: 3px !important; }
+.b-w-4 { border-width: 4px !important; }
+.b-w-5 { border-width: 5px !important; }
+.b-r-0 { border-radius: 0 !important; }
+.b-r-1 { border-radius: 1px !important; }
+.b-r-2 { border-radius: 2px !important; }
+.b-r-3 { border-radius: 3px !important; }
+.b-r-4 { border-radius: 4px !important; }
+.b-r-5 { border-radius: 5px !important; }

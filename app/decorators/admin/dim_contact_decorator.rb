@@ -1,4 +1,4 @@
-class Admin::DashboardDecorator < Admin::BaseDecorator
+class Admin::DimContactDecorator < Draper::Decorator
   delegate_all
 
   # Define presentation-specific methods here. Helpers are accessed through
@@ -9,5 +9,10 @@ class Admin::DashboardDecorator < Admin::BaseDecorator
   #       object.created_at.strftime("%a %m/%d/%y")
   #     end
   #   end
+  def demo_decorator
+    h.content_tag :span do
+      demo decorator
+    end
+  end
 
 end

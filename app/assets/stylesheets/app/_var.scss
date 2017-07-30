@@ -28,8 +28,8 @@ $asbestos:       #7f8c8d;
 $white:          #fafafa;
 $black:          #212121;
 
-$umbra-opacity:      0.3;
-$penumbra-opacity:   0.19;
+$umbra-opacity:      0.2;
+$penumbra-opacity:   0.14;
 $shadow-opacity: 0.12;
 
 $shadow-1dp: 0px 1px 3px 0px rgba(0, 0, 0, $umbra-opacity), 0px 1px 1px 0px rgba(0, 0, 0, $penumbra-opacity), 0px 2px 1px -1px rgba(0, 0, 0, $shadow-opacity);
@@ -63,7 +63,7 @@ $gray-dark:              darken($gray, 13.5%);
 $gray-light:             #7A8288;
 $gray-lighter:           #90a4ae;
 
-$brand-primary:         #607d8b;
+$brand-primary:         #1e88e5; //#607d8b;
 $brand-success:         #1de9b6;
 $brand-warning:         #ff9800;
 $brand-danger:          #ef5350;
@@ -76,6 +76,9 @@ $link-hover-color: darken($link-color, 10%);
 
 $body-bg:               $primary-bg;
 $text-color:            $primary-color;
+
+$title-font-size-base:     rem(2.000);
+$subhead-font-size-base:   rem(1.600);
 
 $font-family-sans-serif:  'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $primary-font:         $font-family-sans-serif;

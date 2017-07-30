@@ -1,4 +1,5 @@
 require_relative 'boot'
+require 'csv'
 
 require "rails"
 # Pick the frameworks you want:
@@ -24,6 +25,7 @@ module Rykn0wxx
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    config.active_support.escape_html_entities_in_json = true
 
     # Don't generate system test files.
     config.generators.system_tests = nil

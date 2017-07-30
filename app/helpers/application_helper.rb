@@ -33,4 +33,9 @@ module ApplicationHelper
     end
   end
 
+  def to_show_fields?(name)
+    restricted_fields = %w(id created_at updated_at)
+    restricted_fields.include?(name)
+  end
+
 end

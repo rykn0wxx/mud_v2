@@ -1,0 +1,23 @@
+<% title "Import Files", false %>
+
+<div class="box">
+  <div class="box-header">
+    <h4 class="md-subhead">
+      Import Bulk Records
+    </h4>
+  </div>
+  <div class="box-body">
+    <%= form_tag url_for(only_path: true, action: 'do_import'), :method => :post, class: "import-form" do %>
+      <p class="text-wet-asphalt">
+        <strong>Supported file types:</strong>
+        .csv, .xls, .xlsx
+      </p>
+      <div class="form-group">
+        <%= label_tag :file, 'File input', :class => "input-label" %>
+        <%= file_field_tag :file %>
+      </div>
+      <%= link_to "Cancel", { :controller => controller_name, :action => "index" }, { :class => "btn btn-flat" } %>
+      <%= submit_tag "Import", :class => "btn btn-flat btn-primary" %>
+    <% end %>
+  </div>
+</div>

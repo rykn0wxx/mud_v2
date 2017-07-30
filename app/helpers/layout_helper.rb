@@ -9,8 +9,8 @@ module LayoutHelper
     @show_header
   end
 
-  def set_to_active(ctrl_name)
-    controller_name == ctrl_name
+  def show_admin?
+    params[:controller].to_s =~ /admin/
   end
 
   def navbar_link_to(label, path, options={})

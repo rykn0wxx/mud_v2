@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    box-shadow: $shadow-2dp;
+    box-shadow: $shadow-1dp;
     &:not([class*="bg-"]) {
       background: #fafafa;
       color: #333;

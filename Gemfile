@@ -46,3 +46,4 @@ source 'https://rails-assets.org' do
 end
 
 gem 'draper', '~> 3.0'
+gem 'roo'

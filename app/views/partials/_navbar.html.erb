@@ -6,6 +6,7 @@
         <%= linker %>
         <ul class="nav nav-sub nav-stacked collapse">
           <%= navbar_linker "Dashboard", admin_dashboard_path %>
+          <%= navbar_linker "Contacts", admin_dim_contacts_path %>
         </ul>
       <% end %>
       <li class="treeview">
@@ -23,6 +24,17 @@
           <li><a href="#">Sub Menu2</a></li>
         </ul>
       </li>
+      <span class="flex"></span>
+      <% if show_admin? %>
+        <ul class="metismenu nav nav-inverse nav-bordered nav-inline nav-hoverable is-hoverable is-right m-r-10" data-plugin="metismenu">
+          <li class="treeview">
+            <%= link_to "New Record", { :action => 'new'} %>
+          </li>
+          <li class="treeview">
+            <%= link_to "Import Records", { :action => 'import'} %>
+          </li>
+        </ul>
+      <% end %>
     </ul>
   </nav>
 </aside>

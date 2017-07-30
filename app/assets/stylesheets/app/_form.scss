@@ -80,20 +80,7 @@
   .mud-form {
     .form-group {
       .form-control {
-        display: block;
-      	margin-top: 0;
-      	padding: 2px 2px 1px;
-      	border: 0 solid rgba(0,0,0,0);
-      	background: none;
-      	line-height: 26px;
-      	height: 30px;
-      	border-radius: 0;
-      	border-style: solid;
-      	width: 100%;
-      	box-sizing: border-box;
-      	float: left;
-      	box-shadow: none;
-        border-bottom: 1px solid rgba(0,0,0,0.12);
+        @extend %form-control;
         &:focus, &:active {
           border-bottom-width: 2px;
           border-bottom-color: #106cc8;
@@ -109,4 +96,32 @@
     	line-height: 14px;
     }
   }
+  .new-form {
+    max-width: 864px;
+    margin: 2% auto;
+    .form-control {
+      @extend %form-control;
+      &:focus, &:active {
+        box-shadow: none;
+        border: none;
+        border-bottom: 2px solid #106cc8;
+      }
+    }
+  }
+}
+%form-control {
+  display: block;
+  margin-top: 0;
+  padding: 2px 2px 1px;
+  border: 0 solid rgba(0,0,0,0);
+  background: none;
+  line-height: 26px;
+  height: 30px;
+  border-radius: 0;
+  border-style: solid;
+  width: 100%;
+  box-sizing: border-box;
+  float: left;
+  box-shadow: none;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
 }
