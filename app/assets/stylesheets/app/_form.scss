@@ -77,4 +77,36 @@
       border-top: 1px solid rgba(128,128,128,0.5);
     }
   }
+  .mud-form {
+    .form-group {
+      .form-control {
+        display: block;
+      	margin-top: 0;
+      	padding: 2px 2px 1px;
+      	border: 0 solid rgba(0,0,0,0);
+      	background: none;
+      	line-height: 26px;
+      	height: 30px;
+      	border-radius: 0;
+      	border-style: solid;
+      	width: 100%;
+      	box-sizing: border-box;
+      	float: left;
+      	box-shadow: none;
+        border-bottom: 1px solid rgba(0,0,0,0.12);
+        &:focus, &:active {
+          border-bottom-width: 2px;
+          border-bottom-color: #106cc8;
+        }
+      }
+    }
+    .help-block {
+      color: $gray-light;
+      padding-right: 5px;
+    	padding-left: 0;
+    	display: block;
+    	font-size: 12px;
+    	line-height: 14px;
+    }
+  }
 }

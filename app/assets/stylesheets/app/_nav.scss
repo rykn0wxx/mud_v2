@@ -188,4 +188,9 @@
   .nav-stacked > li + li {
     margin: 0;
   }
+  .treeview {
+    .nav-icon {
+      height: 24px;
+    }
+  }
 }

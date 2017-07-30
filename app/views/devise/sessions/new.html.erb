@@ -1,0 +1,28 @@
+<% title "Log in", false %>
+
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 col-sm-12">
+    <div class="box">
+      <div class="box-header bg-slate">
+        <h4 class="box-title">Log in</h4>
+      </div>
+      <div class="box-body">
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), :html => { :class => "form-horizontal mud-form" }) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="form-inputs">
+            <%= f.input :login, required: true, autofocus: true %>
+            <%= f.input :password, required: true %>
+          </div>
+
+          <div class="form-actions form-group">
+            <div class="col-sm-12">
+              <%= f.button :submit, "Log in", :class => "btn-primary pull-right" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

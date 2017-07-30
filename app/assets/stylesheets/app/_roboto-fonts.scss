@@ -70,4 +70,17 @@ $material_path:        'material';
 
   /* Support for IE. */
   font-feature-settings: 'liga';
+
+  color: rgba(0, 0, 0, 0.54);
+
+  &.inactive {
+    color: rgba(0, 0, 0, 0.26);
+  }
+  &.light {
+    color: rgba(255, 255, 255, 0.9);
+    &.inactive {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
 }

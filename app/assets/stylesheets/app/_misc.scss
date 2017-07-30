@@ -1,0 +1,85 @@
+@function isDark($c) {
+  @if lightness($c) < 60% {
+    @return #fafafa;
+  }
+  @if lightness($c) >= 60% {
+    @return #111;
+  }
+}
+
+@mixin bg-varies() {
+  $colornames: 'turquoise','emerland','peter-river','amethyst','wet-asphalt','green-sea','nephritis','belize-hole','wisteria','midnight-blue','sun-flower','carrot','alizarin','clouds','concrete','orange','pumpkin','pomegranate','silver','asbestos','slate';
+  $colors: #1abc9c,#2ecc71,#3498db,#9b59b6,#34495e,#16a085,#27ae60,#2980b9,#8e44ad,#2c3e50,#f1c40f,#e67e22,#e74c3c,#ecf0f1,#95a5a6,#f39c12,#d35400,#c0392b,#bdc3c7,#7f8c8d,#484e55;
+  $l: length($colornames);
+  @for $i from 1 through $l {
+    $ss: nth($colornames, $i);
+    .bg-#{$ss} {
+      background-color: nth($colors, $i) !important;
+      color: isDark(nth($colors, $i)) !important;
+    }
+    .text-#{$ss} {
+      color: nth($colors, $i) !important;
+    }
+  }
+}
+@include bg-varies;
+
+@mixin marg($v) {
+  .m-a-#{$v} {
+    margin: #{$v}px !important;
+  }
+  .m-t-#{$v} {
+    margin-top: #{$v}px !important;
+  }
+  .m-r-#{$v} {
+    margin-right: #{$v}px !important;
+  }
+  .m-b-#{$v} {
+    margin-bottom: #{$v}px !important;
+  }
+  .m-l-#{$v} {
+    margin-left: #{$v}px !important;
+  }
+  .m-h-#{$v} {
+    margin-right: #{$v}px !important;
+    margin-left: #{$v}px !important;
+  }
+  .m-v-#{$v} {
+    margin-top: #{$v}px !important;
+    margin-bottom: #{$v}px !important;
+  }
+}
+
+@mixin padd($v) {
+  .p-a-#{$v} {
+    padding: #{$v}px !important;
+  }
+  .p-t-#{$v} {
+    padding-top: #{$v}px !important;
+  }
+  .p-r-#{$v} {
+    padding-right: #{$v}px !important;
+  }
+  .p-b-#{$v} {
+    padding-bottom: #{$v}px !important;
+  }
+  .p-l-#{$v} {
+    padding-left: #{$v}px !important;
+  }
+  .p-h-#{$v} {
+    padding-right: #{$v}px !important;
+    padding-left: #{$v}px !important;
+  }
+  .p-v-#{$v} {
+    padding-top: #{$v}px !important;
+    padding-bottom: #{$v}px !important;
+  }
+}
+
+@mixin mainloop() {
+  @for $i from 0 through 5 {
+    $v: $i * 5;
+    @include marg($v);
+    @include padd($v);
+  }
+}

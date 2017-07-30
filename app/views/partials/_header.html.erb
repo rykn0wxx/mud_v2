@@ -19,19 +19,24 @@
       <ul class="nav navbar-header-nav">
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <b>User</b>
+            <i class="material-icons light inactive pull-left m-r-10 lh-20"><%= (user_signed_in?) ? 'account_box' : 'airline_seat_recline_extra'  %></i>
+            <%= (user_signed_in?) ? current_user.username : "User" %>
           </a>
           <ul class="dropdown-menu flipInY pull-right">
             <li class="user-options">
               <div class="pull-left">
-                <a href="#" class="btn btn-default btn-flat">
-                  Edit Profile
-                </a>
+                <% if user_signed_in? %>
+                  <%= link_to "Edit Profile", edit_user_registration_path, :class => "btn btn-default btn-flat" %>
+                <% else %>
+                  <%= link_to "Create New User", new_user_registration_path, :class => "btn btn-default btn-flat" %>
+                <% end %>
               </div>
               <div class="pull-right">
-                <a href="#" class="btn btn-default btn-flat">
-                  Sign Out
-                </a>
+                <% if user_signed_in? %>
+                  <%= link_to "Sign out", destroy_user_session_path, :class => "btn btn-default btn-flat", :method => :delete %>
+                <% else %>
+                  <%= link_to "Sign in", new_user_session_path, :class => "btn btn-default btn-flat" %>
+                <% end %>
               </div>
             </li>
           </ul>

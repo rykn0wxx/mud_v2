@@ -35,7 +35,7 @@ module Rykn0wxx
       g.javascripts false
       g.jbuilder false
       g.helper false
-      g.controller :test_framework => false, :helper => false, :assets => false
+      g.controller :test_framework => nil, :helper => false, :assets => false
       g.view_specs false
       g.helper_specs false
       g.system_tests = nil
