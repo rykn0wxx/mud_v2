@@ -41,9 +41,13 @@ class Admin::DimContactsController < Admin::BaseController
     end
   end
 
+  def import
+    @model = DimContact
+  end
+
   def do_import
     DimContact.import(params[:file])
-    redirect_to admin_dim_contacts_url, notice: "New records successfully imported."
+    # redirect_to admin_dim_contacts_url, notice: "New records successfully imported."
   end
 
   private

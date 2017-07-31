@@ -20,6 +20,7 @@ gem 'simple_form', '~> 3.5'
 gem 'devise', '~> 4.2', '>= 4.2.1'
 gem 'jsonapi-resources'
 gem 'chartkick', '~> 2.2', '>= 2.2.4'
+	gem 'faker'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -27,7 +28,6 @@ end
 
 group :development do
   gem 'web-console', '>= 3.3.0'
-	gem 'faker'
   gem 'factory_girl'
 	gem 'annotate', '~> 2.7', '>= 2.7.2'
 	gem 'sqlite3'
@@ -46,4 +46,4 @@ source 'https://rails-assets.org' do
 end
 
 gem 'draper', '~> 3.0'
-gem 'roo'
+gem 'roo', '~> 2.7', '>= 2.7.1'
